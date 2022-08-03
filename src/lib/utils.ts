@@ -1,4 +1,4 @@
-import type { Vector } from "./vectorMath";
+import type { Vector } from "./vectors";
 
 export function coordsToSVGString(coords: Vector[]): string {
 	return coords.map(coord => `${coord.x},${coord.y}`).join(' ')

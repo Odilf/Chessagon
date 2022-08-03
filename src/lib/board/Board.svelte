@@ -2,7 +2,7 @@
 	import { capture, getInitialSetup, moveFilter, type Piece as PieceType } from "./pieces";
 	import Piece from "./Piece.svelte";
 
-	import { Vector } from "$lib/vectorMath";
+	import { Vector } from "$lib/vectors";
 	import Tile from "./Tile.svelte";
 	import { fade } from "svelte/transition";
 

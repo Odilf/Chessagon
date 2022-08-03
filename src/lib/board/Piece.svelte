@@ -22,7 +22,7 @@
 </script>
 
 <script lang="ts">
-	import { hexToCart } from "$lib/vectorMath";
+	import { hexToCart } from "$lib/vectors";
 	import type { Piece } from "./pieces";	
 
 	export let piece: Piece

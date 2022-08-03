@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { mod } from "$lib/utils";
 
-	import type { Vector } from "$lib/vectorMath";
+	import type { Vector } from "$lib/vectors";
 	import { createEventDispatcher } from "svelte";
 	import Hexagon from "./Hexagon.svelte";
 

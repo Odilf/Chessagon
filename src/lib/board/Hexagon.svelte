@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { coordsToSVGString } from "$lib/utils";
-	import { alpha, hexagonPoints, hexToCart, sum, Vector,  } from "$lib/vectorMath";	
+	import { alpha, hexagonPoints, hexToCart, sum, Vector,  } from "$lib/vectors";	
 
 	export let position: Vector
 	export let r = 1

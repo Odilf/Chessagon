@@ -1,4 +1,4 @@
-import { equals, sum, Vector } from "$lib/vectorMath";
+import { equals, sum, Vector } from "$lib/vectors";
 
 export type Type = 'pawn'
 				 | 'bishop'

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { hexToCart, type Vector } from "$lib/vectorMath";
+	import { hexToCart, type Vector } from "$lib/vectors";
 	import { draw, fade, scale } from "svelte/transition";
 	import { quintOut } from 'svelte/easing'
 
