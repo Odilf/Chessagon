@@ -43,3 +43,7 @@ export function sum(a: Vector, b: Vector): Vector {
 export function hexToCart(hex: Vector): Vector {
 	return sum(hexBase.x.scale(hex.x), hexBase.y.scale(hex.y))
 }
+
+export function equals(a: Vector, b: Vector) {
+	return a.x === b.x && a.y === b.y
+}

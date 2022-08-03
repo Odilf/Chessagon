@@ -1,6 +1,29 @@
+<script context='module'>
+	const urls = {
+		black: {
+			king: 'https://upload.wikimedia.org/wikipedia/commons/f/f0/Chess_kdt45.svg',
+			queen: 'https://upload.wikimedia.org/wikipedia/commons/4/47/Chess_qdt45.svg',
+			rook: 'https://upload.wikimedia.org/wikipedia/commons/f/ff/Chess_rdt45.svg',
+			bishop: 'https://upload.wikimedia.org/wikipedia/commons/9/98/Chess_bdt45.svg',
+			knight: 'https://upload.wikimedia.org/wikipedia/commons/e/ef/Chess_ndt45.svg',
+			pawn: 'https://upload.wikimedia.org/wikipedia/commons/c/c7/Chess_pdt45.svg',
+		},
+
+		white: {
+			king: 'https://upload.wikimedia.org/wikipedia/commons/4/42/Chess_klt45.svg',
+			queen: 'https://upload.wikimedia.org/wikipedia/commons/1/15/Chess_qlt45.svg',
+			rook: 'https://upload.wikimedia.org/wikipedia/commons/7/72/Chess_rlt45.svg',
+			bishop: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Chess_blt45.svg',
+			knight: 'https://upload.wikimedia.org/wikipedia/commons/7/70/Chess_nlt45.svg',
+			pawn: 'https://upload.wikimedia.org/wikipedia/commons/4/45/Chess_plt45.svg',
+
+		}
+	}
+</script>
+
 <script lang="ts">
 	import { hexToCart } from "$lib/vectorMath";
-	import { urls, type Piece } from "./pieces";	
+	import type { Piece } from "./pieces";	
 
 	export let piece: Piece
 	export let color: 'black' | 'white'
@@ -8,36 +31,13 @@
 	$: coord = hexToCart(piece.position)
 
 	const size = 1.4
-
-	// let held = false
-
-	// let mousePos = [0, 0]
-	// let image: SVGImageElement
-	// $: rect = image?.getBoundingClientRect() || {x: 0, y: 0}
-	// $: delta = [rect.x - mousePos[0], rect.y - mousePos[1]]
-
-	// $: console.log(delta);
-	
 </script>
 
-<!-- <svelte:window onmousemove={e => {
-	if (held) {
-		mousePos = [
-			e.clientX,
-			e.clientY,
-		]
-	}
-}}/> -->
-
 <image x={coord.x - size/2} y={coord.y - size/2} width={size}
-href={urls[color][piece.type]} 
-on:click
-/>
-<!-- on:mousedown={() => held = true} on:mouseup={() => held = false} -->
+href={urls[color][piece.type]} on:click />
 
 <style>
 	image {
 		cursor: pointer;
-		transition: cubic-bezier(0.445, 0.05, 0.55, 0.95) 70ms;
 	}
 </style>
